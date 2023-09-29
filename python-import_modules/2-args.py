@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from sys import argv
-for i in range(1, len(argv) - 1):
+for i in range(1, len(argv)):
     if argv == 1:
         print("1 argument:")
         print("1: {}".format(argv[1]))
