@@ -7,7 +7,6 @@ if args == 2:
 elif args == 1:
     print("0 arguments.")
 else:
-    print("{} arguments:".format(len(argv)))
-
-for i in range(1, args):
-    print("{}: {}".format(i, argv[i]))
+    print("{} arguments:".format(args))
+    for i in range(1, args):
+        print("{}: {}".format(i, argv[i]))
