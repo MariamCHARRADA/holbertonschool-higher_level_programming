@@ -18,15 +18,9 @@ Write a class Square that defines a square by:
     - position should be use by using space - Don’t fill lines by spaces when position[1] > 0
 '''
 class Square:
-    '''
-    A class that defines a square 
-    '''
+    '''A class that defines a square '''
     def __init__(self, size=0, position=(0, 0)):
-        '''initialize square size'''
-        if type(size)!= int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        '''initialize square size and position'''
         self.__size = size
         self.__position = position
 
@@ -39,9 +33,8 @@ class Square:
     def position(self, value):
         '''position setter'''
         if not isinstance(value, tuple) or len(value)!=2:
-            if not isinstance(value[0], int) and value[0] > 0:
-                if not isinstance(value[1], int) and value[1] > 0:
-                    raise TypeError("position must be a tuple of 2 positive integers")
+            if not (isinstance(value[0], int) and value[0] > 0 and isinstance(value[1], int) and value[1] > 0):
+                raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     @property
