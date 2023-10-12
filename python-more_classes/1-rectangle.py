@@ -2,7 +2,7 @@
 '''a class Rectangle that defines a rectangle'''
 
 
-class Rectangle():
+class Rectangle:
     '''a class Rectangle that defines a rectangle'''
 
     def __init__(self, width=0, height=0):
@@ -12,7 +12,7 @@ class Rectangle():
 
     @property
     def width(self):
-        '''width getter'''
+        '''gets the rectangle width'''
         return self.__width
 
     @width.setter
