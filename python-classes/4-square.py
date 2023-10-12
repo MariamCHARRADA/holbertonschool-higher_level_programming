@@ -11,6 +11,7 @@ class Square:
     - Public instance method: def area(self): that returns the current square area
     '''
     def __init__(self, size=0):
+        '''init'''
         self.__size = size
 
     @property
@@ -27,4 +28,5 @@ class Square:
         self.__size = value
     
     def area(self):
+        '''size**2'''
         return self.__size ** 2
