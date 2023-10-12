@@ -4,18 +4,17 @@
 
 class Rectangle():
     '''a class Rectangle that defines a rectangle'''
-    
+
     def __init__(self, width=0, height=0):
         '''initialize height and width'''
         self.height = height
         self.width = width
 
-        
     @property
     def width(self):
         '''width getter'''
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         '''width setter'''
@@ -25,12 +24,12 @@ class Rectangle():
             raise ValueError('width must be >=0')
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         '''height getter'''
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         '''height setter'''
@@ -40,4 +39,3 @@ class Rectangle():
             raise ValueError('height must be >=0')
         else:
             self.__height = value
-    
