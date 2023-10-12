@@ -12,13 +12,16 @@ Write a class Square that defines a square by: (based on 4-square.py)
 - Public instance method: def my_print(self): that prints in stdout the square with the character #:
     - if size is equal to 0, print an empty line
 '''
+
+
 class Square:
     '''
-    A class that defines a square 
+    A class that defines a square
     '''
+
     def __init__(self, size=0):
         '''initialize square size'''
-        if type(size)!= int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -28,16 +31,16 @@ class Square:
     def size(self):
         '''size getter'''
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         '''size setter'''
-        if type(value)!= int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def area(self):
         '''returns square area'''
         return self.__size ** 2

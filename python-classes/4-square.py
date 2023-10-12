@@ -9,13 +9,16 @@ A class that defines a square by:
 - Instantiation with optional size: def __init__(self, size=0):
 - Public instance method: def area(self): that returns the current square area
 '''
+
+
 class Square():
     '''
-    A class that defines a square 
+    A class that defines a square
     '''
+
     def __init__(self, size=0):
         '''initialize square size'''
-        if type(size)!= int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -25,16 +28,16 @@ class Square():
     def size(self):
         '''size getter'''
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         '''size setter'''
-        if type(value)!= int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def area(self):
         '''returns square area'''
         return self.__size ** 2
