@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """a function that divides all elements of a matrix"""
+
+
 def matrix_divided(matrix, div):
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
