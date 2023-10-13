@@ -55,5 +55,6 @@ class Rectangle:
         '''prints rectangle with character #'''
         if self.width == 0 or self.height == 0:
             return ""
-        rectangle = ('#' * self.width + '\n') * self.height
+        rectangle = ('#' * self.width + '\n') * (self.height - 1)
+        rectangle += '#' * self.width
         return rectangle
