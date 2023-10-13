@@ -1,0 +1,52 @@
+def test_add_integer():
+    # Test case 1: Adding two positive integers
+    result = add_integer(2, 3)
+    assert result == 5
+
+    # Test case 2: Adding a float and an integer
+    result = add_integer(2.0, 3)
+    assert result == 5
+
+    # Test case 3: Adding a negative and a positive integer
+    result = add_integer(-2, 3)
+    assert result == 1
+
+    # Test case 4: Adding a positive and a negative integer
+    result = add_integer(5, -2)
+    assert result == 3
+
+    # Test case 5: Adding two negative integers
+    result = add_integer(2, -5)
+    assert result == -3
+
+    # Test case 6: Adding with the default value for b
+    result = add_integer(2)
+    assert result == 100
+
+    # Test case 7: Adding a string (should raise TypeError)
+    try:
+        add_integer(4, "School")
+    except TypeError as e:
+        assert str(e) == "b must be an integer"
+
+    # Test case 8: Adding a string (should raise TypeError)
+    try:
+        add_integer("School", 4)
+    except TypeError as e:
+        assert str(e) == "a must be an integer"
+
+    # Test case 9: Adding a NaN float (should raise ValueError)
+    try:
+        add_integer(float('nan'))
+    except ValueError as e:
+        assert str(e) == "cannot convert float NaN to integer"
+
+    # Test case 10: Adding with an infinite float (should raise OverflowError)
+    try:
+        add_integer(1, float('inf'))
+    except OverflowError as e:
+        assert str(e) == "cannot convert float infinity to integer"
+
+if __name__ == "__main__":
+    test_add_integer()
+    print("All tests passed.")
