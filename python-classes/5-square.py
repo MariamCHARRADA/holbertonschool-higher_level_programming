@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''
+"""
 Write a class Square that defines a square by: (based on 4-square.py)
 
 - Private instance attribute: size:
@@ -11,16 +11,16 @@ Write a class Square that defines a square by: (based on 4-square.py)
 - Public instance method: def area(self): that returns the current square area
 - Public instance method: def my_print(self): that prints in stdout the square with the character #:
     - if size is equal to 0, print an empty line
-'''
+"""
 
 
 class Square:
-    '''
+    """
     A class that defines a square
-    '''
+    """
 
     def __init__(self, size=0):
-        '''initialize square size'''
+        """initialize square size"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
@@ -29,12 +29,12 @@ class Square:
 
     @property
     def size(self):
-        '''size getter'''
+        """size getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        '''size setter'''
+        """size setter"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -42,11 +42,11 @@ class Square:
         self.__size = value
 
     def area(self):
-        '''returns square area'''
-        return self.__size ** 2
+        """returns square area"""
+        return self.__size**2
 
     def my_print(self):
-        '''prints in stdout the square with the character #'''
+        """prints in stdout the square with the character #"""
         if self.__size == 0:
             print()
         else:
