@@ -1,1 +1,1 @@
-[1, 2, 3] # the assignment inside the function only modifies the local parameter n (not the original l1)
+[1, 2, 3]

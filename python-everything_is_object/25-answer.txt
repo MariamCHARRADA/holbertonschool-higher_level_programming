@@ -1,1 +1,1 @@
-False #Python creates new tuple objects for each assignment
+False
