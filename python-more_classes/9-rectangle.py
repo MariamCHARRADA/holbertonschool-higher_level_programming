@@ -7,7 +7,7 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = '#'
-    
+
     def __init__(self, width=0, height=0):
         '''initialize height and width'''
         self.height = height
@@ -59,7 +59,8 @@ class Rectangle:
         '''prints rectangle with print_symbol'''
         if self.width == 0 or self.height == 0:
             return ""
-        rectangle = (str(self.print_symbol) * self.width + '\n') * (self.height - 1)
+        rectangle = (str(self.print_symbol) *
+                     self.width + '\n') * (self.height - 1)
         rectangle += str(self.print_symbol) * self.width
         return rectangle
 
@@ -72,7 +73,7 @@ class Rectangle:
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
 
-    @staticmethod   
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         '''returns the biggest rectangle based on the area'''
         if not isinstance(rect_1, Rectangle):
@@ -85,5 +86,5 @@ class Rectangle:
             return rect_2
 
     @classmethod
-    def square(cls, size=0):  
+    def square(cls, size=0):
         return cls(size, size)
