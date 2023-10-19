@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-'''BaseGeography class'''
+"""BaseGeography class"""
+
+
 class BaseGeometry:
-    '''BaseGeography class'''
+    """BaseGeography class"""
+
     def area(self):
         raise Exception("area() is not implemented")
