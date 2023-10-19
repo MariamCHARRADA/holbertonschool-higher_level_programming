@@ -17,4 +17,3 @@ else:
 
 my_list.append(args[1:])
 save_to_json_file(my_list, filename)
-print(my_list)
