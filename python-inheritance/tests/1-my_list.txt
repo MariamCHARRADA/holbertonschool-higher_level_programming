@@ -26,3 +26,15 @@
 >>> my_list = MyList([42])
 >>> my_list.print_sorted()
 [42]
+
+>>> my_list = MyList([6, 6, 6, 6, 6])
+>>> my_list.print_sorted()
+[6, 6, 6, 6, 6]
+
+>>> my_list = MyList([100, 200, 300])
+>>> my_list.print_sorted()
+[100, 200, 300]
+
+>>> my_list = MyList([-1, -2, -3, -4])
+>>> my_list.print_sorted()
+[-4, -3, -2, -1]
