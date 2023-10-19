@@ -7,4 +7,5 @@ class MyList(list):
 
     def print_sorted(self):
         """prints in stdout the sorted list"""
-        print(sorted(self))
+        sortedlist = sorted(self)
+        print(sortedlist)
