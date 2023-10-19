@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """creates an Object from a “JSON file”"""
 import sys
+from os.path import isfile
 
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
@@ -14,7 +15,5 @@ try:
 except:
     my_list = []
 
-for i in range(1, len(args)):
-    my_list.append(args[i])
-
+my_list.append(args[1:])
 save_to_json_file(my_list, filename)
