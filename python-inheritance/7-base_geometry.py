@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""BaseGeography class"""
+"""BaseGeometry class"""
 
 
 class BaseGeometry:
-    """BaseGeography class"""
+    """BaseGeometry class: public instance methods"""
 
     def area(self):
-        '''raise exception'''
+        """raise exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
