@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-'''MyList class'''
+"""MyList class"""
 
 
 class MyList(list):
-    '''MyList class'''
+    """MyList class"""
 
     def print_sorted(self):
-        '''prints in stdout the sorted list'''
+        """prints in stdout the sorted list"""
         print(sorted(self))
