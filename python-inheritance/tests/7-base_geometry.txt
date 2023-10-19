@@ -32,3 +32,45 @@ Traceback (most recent call last):
   ...
 TypeError: test must be an integer
 >>>
+
+>>> bg.integer_validator("minimum_valid", 1)  
+>>>
+
+>>> bg.integer_validator("negative_minimum", -1)  
+Traceback (most recent call last):
+  ...
+ValueError: negative_minimum must be greater than 0
+>>>
+
+>>> bg.integer_validator("maximum_valid", 999999)  
+>>>
+
+>>> bg.integer_validator("large_negative", -999999)  
+Traceback (most recent call last):
+  ...
+ValueError: large_negative must be greater than 0
+>>>
+
+>>> bg.integer_validator("zero_float", 0.0)  
+Traceback (most recent call last):
+  ...
+TypeError: zero_float must be an integer
+>>>
+
+>>> bg.integer_validator("string_float", "3.14")  
+Traceback (most recent call last):
+  ...
+TypeError: string_float must be an integer
+>>>
+
+>>> bg.integer_validator("list_with_integers", [1, 2, 3])  
+Traceback (most recent call last):
+  ...
+TypeError: list_with_integers must be an integer
+>>>
+
+>>> bg.integer_validator("empty_string", "")  
+Traceback (most recent call last):
+  ...
+TypeError: empty_string must be an integer
+>>>
