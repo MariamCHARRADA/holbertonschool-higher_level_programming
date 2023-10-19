@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""BaseGeometry class"""
-BaseGeometry = __import__("6-base_geometry").BaseGeometry
+"""BaseGeography class"""
 
 
 class BaseGeometry:
-    """BaseGeometry class"""
+    """BaseGeography class"""
+
+    def area(self):
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """public method that validates value"""
