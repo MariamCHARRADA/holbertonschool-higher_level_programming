@@ -14,5 +14,7 @@ try:
 except:
     my_list = []
 
-my_list.extend(args[1:])
+for i in range(1, len(args)):
+    my_list.append(args[i])
+
 save_to_json_file(my_list, filename)
