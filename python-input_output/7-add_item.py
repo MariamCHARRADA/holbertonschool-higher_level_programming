@@ -15,5 +15,5 @@ else:
     my_list = []
 
 for i in args:
-	my_list.append(i)
+    my_list.append(i)
 save_to_json_file(my_list, filename)
