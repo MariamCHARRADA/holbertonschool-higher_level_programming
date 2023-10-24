@@ -2,6 +2,12 @@
 """
 Defines Rectangle that inherits from Base
 """
+
+import sys
+
+sys.path.append(
+    "c:/holbertonschool-higher_level_programming\python-almost_a_circle"
+)
 from models.base import Base
 
 
