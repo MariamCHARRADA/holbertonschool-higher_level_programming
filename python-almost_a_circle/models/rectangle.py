@@ -2,8 +2,6 @@
 """
 Module for base class
 """
-
-
 from models.base import Base
 
 
@@ -11,11 +9,12 @@ class Rectangle(Base):
     """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
+        """Rectangle class constructor"""
         __width = width
         __height = height
         __x = x
         __y = y
+        super().__init__(id)
 
 
 @property
