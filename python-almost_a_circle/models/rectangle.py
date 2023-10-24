@@ -8,10 +8,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle class constructor"""
-        __width = width
-        __height = height
-        __x = x
-        __y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -79,4 +79,4 @@ class Rectangle(Base):
         for i in range(self.__height):
             for j in range(self.__width):
                 print("#", end="")
-                print()
+            print()
