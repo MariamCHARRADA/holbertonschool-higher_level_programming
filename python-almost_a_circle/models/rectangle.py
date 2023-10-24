@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""Module for base class"""
-
-
 Base = __import__("base").Base
+"""Module for base class"""
 
 
 class Rectangle(Base):
