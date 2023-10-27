@@ -59,11 +59,10 @@ class Base:
         filename = cls.__name__ + ".json"
         instances = []
         try:
-            with open(filename, "r") as file:
+            with open(filename) as file:
                 dict_list = cls.from_json_string(file.read())
                 for dic in dict_list:
-                    instance = cls(**dic)
-                    instances.append(instance)
+                    instances = cls.create(**dic)
             return instances
         except FileNotFoundError:
             return []
