@@ -62,7 +62,8 @@ class Base:
             with open(filename) as file:
                 dict_list = cls.from_json_string(file.read())
                 for dic in dict_list:
-                    instances = cls.create(**dic)
+                    instance = cls.create(**dic)
+                    instances.append(instance)
             return instances
         except FileNotFoundError:
             return []
