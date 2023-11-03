@@ -43,10 +43,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(instances[0].id, 1)
         self.assertEqual(instances[1].name, "Item2")
 
-    def tearDown(self):
-        # Clean up the test data file after all tests
-        if os.path.exists("Base.json"):
-            os.remove("Base.json")
 
 
 if __name__ == "__main__":
